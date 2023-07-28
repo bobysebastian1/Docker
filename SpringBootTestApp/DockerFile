@@ -1,0 +1,7 @@
+# Use Java 11
+FROM openjdk:11-jdk
+
+#COPY JAR FILE
+COPY target/SpringBootTestApp-0.0.1-SNAPSHOT.war SpringBootTestApp-0.0.1-SNAPSHOT.war
+
+ENTRYPOINT ["java","-jar","/SpringBootTestApp-0.0.1-SNAPSHOT.war"]
